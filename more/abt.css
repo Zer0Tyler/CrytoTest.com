@@ -1,0 +1,334 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menu-bar {
+    background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71, #f39c12);
+    background-size: 400% 400%;
+    animation: runningColor 10s ease infinite;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes runningColor {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-item {
+    margin-right: 20px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    margin-right: 10px;
+}
+
+.menu-item a:hover {
+    color: #ffeb3b;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-items {
+        margin-top: 20px;
+    }
+
+    .menu-item {
+        margin: 0;
+        margin-bottom: 0px;
+    }
+}
+/* Add this CSS for social icons */
+
+
+
+
+ 
+ /* footer */
+footer {
+    background: linear-gradient(to right, #3498db, #e74c3c);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
+  #text-footer {
+    opacity: 0;
+    animation: fadeInFromLeft 2s ease-out forwards;
+  }
+  
+  @keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  
+  .running-colorFooter {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #3498db, #e74c3c);
+    animation: runningColorFooter 4s linear infinite;
+  }
+  
+  @keyframes runningColorFooter {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .running-colorFooter {
+        animation: runningColorFooterMobile 4s linear infinite; /* Use a separate animation for smaller screens */
+    }
+}
+
+@keyframes runningColorFooterMobile {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+ /* full */
+  .fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.fullscreen-bg img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1{
+    color: white;
+    text-align: center;
+    
+}
+/* runing */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .about-section {
+    background-color: wheat; /* Gray background */
+    padding: 20px;
+    text-align: center;
+  }
+
+  .running-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3498db; /* Blue color */
+    display: inline-block;
+  }
+
+  @keyframes colorChange {
+    0% { color: #3498db; } /* Blue */
+    50% { color: #e74c3c; } /* Red */
+    100% { color: #3498db; } /* Blue */
+  }
+
+  .animated {
+    animation: colorChange 2s infinite; /* Change color every 2 seconds */
+  }
+  #run{
+    color: white;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  /* post */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px;
+    padding: 20px;
+  }
+  .container-text{
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .text-container {
+    margin-top: 300px;
+    padding: 20px;
+    background-color: #a3ebb3; /* Gray background for text */
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
+}
+
+@media (max-width: 468px) {
+    .text-container {
+        width: 100%; /* Set width to 100% for smaller screens */
+        margin-top: 50px; /* Adjust margin-top as needed */
+        height: auto; /* Allow the height to adjust automatically based on content */
+        margin-right: 50px;
+        margin-left: 0;
+    }
+}
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .animated {
+    animation: fadeIn 1s ease-out; /* Fade in effect */
+  }
+
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Single column for small screens */
+    }
+  }
+  /* Main Content Section */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-item .description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.grid-item:hover .description {
+    opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .grid-item {
+        width: 100%;
+    }
+}
+.about-section-text {
+  color: black;
+  font-size: 24px; /* Default font size for larger screens */
+  text-shadow: #3498db 0 0 10px;
+
+}
+
+/* Adjust font size for smaller screens (e.g., phones) */
+@media (max-width: 768px) {
+  .about-section-text {
+      font-size: 40px;
+  }
+}
+
+/* Additional media queries for even smaller screens if needed */
+@media (max-width: 480px) {
+  .about-section-text {
+      font-size: 27px;
+  }
+}
